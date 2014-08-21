@@ -1,0 +1,16 @@
+﻿@model IEnumerable<MovieViewModel>
+
+@{
+    ViewBag.Title = "Search result";
+}
+
+<h2>Result:</h2>
+
+@(Html.ActionLink("Create New", "Create", "Movie", new {}, new { id = "new"}))
+
+@foreach (var item in Model) {
+    @Html.Partial("_Movie", item)
+}
+
+<section id="CreateDialog">
+</section>

@@ -1,0 +1,16 @@
+﻿@model ITVerket.FinalCut.UIv4.Models.MovieViewModel
+
+@{
+    Layout = "";
+}
+<h2>New</h2>
+
+<section class="movie edit">
+@using (Html.BeginForm("Create", "Movie"))
+{ 
+    @Html.Partial("_EditForm")
+    <div id="Buttons">
+        <input type="submit" value="Save" id="Save">|@(Html.ActionLink("Cancel", "Index", new { }, new { id = "Cancel" }))
+    </div>
+}
+</section>
